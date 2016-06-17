@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
+#include <unistd.h>
 
-#define TAG		"[TEST_0]"
+#define TAG		"\n [TEST_0] "
 
 
 void sigHandler(int sig)
@@ -13,11 +14,18 @@ void sigHandler(int sig)
 int main (int argc, char *argv[])
 {
 	// (1) Inside test_0 program
-	printf(TAG "\n\n Hello World.\n\n");
+	printf(TAG "Hello World.\n");
 
 	// (2) register a signal
 	signal(SIGINT, sigHandler);
 
+	// (3) try while loop
+	int count = 0;
+	while (1)
+	{
+		printf(TAG "\n Ticking tick #%d", ++counter);
+		msleep(1000);		
+	}
 
 	return 0;
 }
