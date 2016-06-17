@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
 	signal(SIGINT, sigHandler);
 
 	// (3) try while loop
-	int count = 0;
+	int counter = 0;
 	while (1)
 	{
 		printf(TAG "\n Ticking tick #%d", ++counter);
