@@ -5,7 +5,7 @@
 #define TAG		"[TEST_0]"
 
 
-void signHandler(int sig)
+void sigHandler(int sig)
 {
 	printf(TAG "\n\n Kill signal detected, shutting down process. \n\n");
 }
