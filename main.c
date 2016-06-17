@@ -8,7 +8,7 @@
 
 void sigHandler(int sig)
 {
-	printf(TAG "\n\n Kill signal detected, shutting down process. \n\n");
+	printf(TAG "\n\n Kill signal detected, exiting process. \n\n");
 
 	exit(0);
 }
@@ -25,7 +25,7 @@ int main (int argc, char *argv[])
 	int counter = 0;
 	while (1)
 	{
-		printf(TAG "Ticking tick #%d", ++counter);
+		printf(TAG "Ticking forever #%d", ++counter);
 		usleep(1000000);		
 	}
 
