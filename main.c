@@ -24,7 +24,7 @@ int main (int argc, char *argv[])
 	while (1)
 	{
 		printf(TAG "\n Ticking tick #%d", ++counter);
-		msleep(1000);		
+		usleep(1000000);		
 	}
 
 	return 0;
