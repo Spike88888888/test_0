@@ -21,6 +21,9 @@ int main (int argc, char *argv[])
 	// (2) register a signal
 	signal(SIGINT, sigHandler);
 
+	// (2-a)
+	printf(TAG "Just randomly add a sanity step.\n");
+
 	// (3) try while loop
 	int counter = 0;
 	while (1)
